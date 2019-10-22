@@ -249,8 +249,8 @@ extension PushNotificationManager{
         let data = jsonString?.data(using: .utf8)
         if let dataDict = try? JSONSerialization.jsonObject(with: data!, options : .allowFragments) as? [String: Any] {
             // json is now a [String : Any] type
-//            let pushData = PushNotificationData(dictionary: dataDict)
-//            return pushData
+           let pushData = PushNotificationData(dictionary: dataDict)
+           return pushData
         }
         return nil
     }
